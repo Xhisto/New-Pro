@@ -11,12 +11,15 @@ public class Easy : MonoBehaviour
     public SpriteRenderer Rend;
     public Transform other;
     public float Timer;
-
-
+    public float leftwarp = -7.5f;
+    public float rigthwarp = 7.5f;
+    public float disapear = 1f;
+    readonly object AtomBomb;
 
     // Use this for initialization
     void Start()
     {
+        other.position = new Vector3(0, 0, 0);
 
     }
 
@@ -47,6 +50,19 @@ public class Easy : MonoBehaviour
 
         Timer += Time.deltaTime;
 
-        Debug.Log(string.Format("[0]", +Timer));
+        Debug.Log(string.Format("Time (i sekunder och decimaler.... FOR NOW ):{0}", +Timer));
+
+
+        if (other.position.x < -7.5f)
+        {
+            transform.position = new Vector3(rigthwarp, other.position.y, other.position.z);
+        }
+
+        if (other.position.x > 7.5f)
+        {
+            transform.position = new Vector3(leftwarp, other.position.y, other.position.z);
+        }
+        
+
     }
 }
