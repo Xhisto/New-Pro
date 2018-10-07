@@ -20,6 +20,9 @@ public class Easy : MonoBehaviour
     public float ColorB;
     public float PositionX;
     public float PositionY;
+    public float TimerSec;
+    public float TimerMin;
+    public float TimerHours;
 
     // Use this for initialization
     void Start()
@@ -41,7 +44,7 @@ public class Easy : MonoBehaviour
             transform.Rotate(0f, 0f, (RotationSpeed / 2) * Time.deltaTime);
             Rend.color = new Color(0f, 0f, 200f);
         }
-        
+
         if (Input.GetKey(KeyCode.D))
         {
             transform.Rotate(0f, 0f, -RotationSpeed * Time.deltaTime);
@@ -72,9 +75,14 @@ public class Easy : MonoBehaviour
         // get key checkar förendringar på när knappen trycks ner och släpps up, medan getkeydown och getkeydown checkar bara de.
 
         Timer += Time.deltaTime;
-        // koden för timer i sekunder istället per frame
-        print((int)Timer);
-        // printar timer i heltal
+        // koden för timer per sekunder istället för per frame
+        TimerSec = (int)Timer % 60;
+        TimerMin = (int)(Timer / 60) % 60;
+        TimerHours = (int)(Timer / 3600) % 60;
+        // Fixar Timer:ns Min visare och Tim visare så det blir 0 efter 60.
+        print(string.Format("{0:0}:{1:00}:{2:00}", TimerHours, TimerMin, TimerSec));
+        // printar timer i sekduner, minuter och i timmar.
+
 
         if (other.position.x < -7.5f)
         {
