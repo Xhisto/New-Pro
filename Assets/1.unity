@@ -181,7 +181,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 303287333}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.0341763, y: -2.1736236, z: 0}
+  m_LocalPosition: {x: 8.81, y: 6.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -198,14 +198,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddc22259eb855c4b976d80617c4d78d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  RotationSpeed: 180
+  Speed: 0
+  RotationSpeed: 320
   Rend: {fileID: 303287334}
   other: {fileID: 303287335}
   Timer: 0
   leftwarp: -7.5
+  upwarp: 5.5
+  downwarp: -5.5
   rigthwarp: 7.5
   disapear: 1
+  RandomColor: {r: 0, g: 0, b: 0, a: 0}
+  ColorR: 0
+  ColorG: 0
+  ColorB: 0
+  PositionX: 0
+  PositionY: 0
 --- !u!1 &1194399165
 GameObject:
   m_ObjectHideFlags: 0
