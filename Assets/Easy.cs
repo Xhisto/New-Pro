@@ -11,10 +11,10 @@ public class Easy : MonoBehaviour
     public SpriteRenderer Rend;
     public Transform other;
     public float Timer;
-    public float leftwarp = -7.5f;
+    public float leftwarp = -9.4f;
     public float upwarp = 5.5f;
     public float downwarp = -5.5f;
-    public float rigthwarp = 7.5f;
+    public float rigthwarp = 9.4f;
     public float ColorR;
     public float ColorG;
     public float ColorB;
@@ -27,7 +27,7 @@ public class Easy : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        PositionX = Random.Range(-6f, 6f);
+        PositionX = Random.Range(-9.0f, 9.0f);
         PositionY = Random.Range(-4.5f, 4.5f);
         // ger mina random values till postioneerna X och Y, men Z måste alltid vara över Z annars overlappar min camera med mitt skepp.
         other.position = new Vector3(PositionX, PositionY, 0f);
@@ -84,14 +84,14 @@ public class Easy : MonoBehaviour
         // printar timer i sekduner, minuter och i timmar.
 
 
-        if (other.position.x < -7.5f)
+        if (other.position.x < -9.4f)
         {
-            transform.position = new Vector3(rigthwarp, other.position.y, other.position.z);
+            transform.position = new Vector3(9.4f, other.position.y, other.position.z);
         }
 
-        if (other.position.x > 7.5f)
+        if (other.position.x > 9.4f)
         {
-            transform.position = new Vector3(leftwarp, other.position.y, other.position.z);
+            transform.position = new Vector3(-9.4f, other.position.y, other.position.z);
         }
 
         if (other.position.y < -5.5)
