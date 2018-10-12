@@ -146,10 +146,10 @@ MonoBehaviour:
   Rend: {fileID: 690496085}
   other: {fileID: 690496086}
   Timer: 0
-  leftwarp: -7.5
+  leftwarp: -9.5
   upwarp: 5.5
   downwarp: -5.5
-  rigthwarp: 7.5
+  rigthwarp: 9.5
   ColorR: 0
   ColorG: 0
   ColorB: 0
@@ -306,7 +306,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8eccdfd548ca71849b84795c94862242, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 82406409539273f41b53bba9d36ab044, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
